@@ -1,0 +1,29 @@
+package object;
+
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import main.GamePanel;
+
+public class OBJ_RightBedOccupied extends SuperObject{
+
+    GamePanel gp;
+    
+    public OBJ_RightBedOccupied(GamePanel gp) {
+
+        this.gp = gp;
+
+        name = "Right Bed Occupied";
+        try {
+            image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("res/objects/right_bed_occupied.png"));
+
+            uTool.scaleImage(image, gp.tileSize, gp.tileSize);
+            
+        }catch(IOException e) {
+            e.printStackTrace();
+        }
+
+        collision = true;
+    }
+}

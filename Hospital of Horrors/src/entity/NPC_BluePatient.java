@@ -71,6 +71,7 @@ public class NPC_BluePatient extends Entity{
             
             gp.player.hasCal = 0;
             hasObj = true;
+            gp.player.hasDoll = true;
         }
 
         if(!hasMissionObj) {

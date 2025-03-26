@@ -30,6 +30,13 @@ public class Player extends Entity{
     public int hasHeart = 0;
     public int playerState = 0;
     public int endNum = 0;
+    public boolean hasPill = false;
+    public boolean hasCelexa = false;
+    public boolean hasZoloft = false;
+    public boolean hasPaxil = false;
+    public boolean hasLexapro = false;
+    public boolean hasDoll = false;
+
 
 
     public Player(GamePanel gp, KeyHandler keyH) {
@@ -221,6 +228,42 @@ public class Player extends Entity{
         }
 
         if(hasPapyrus == 1 && keyH.viewPressed) {
+            gp.ui.showItem = true;
+        } else if(!keyH.viewPressed) {
+            gp.ui.showItem = false;
+        }
+
+        if(hasPill && keyH.viewPressed) {
+            gp.ui.showItem = true;
+        } else if(!keyH.viewPressed) {
+            gp.ui.showItem = false;
+        }
+
+        if(hasZoloft && keyH.viewPressed) {
+            gp.ui.showItem = true;
+        } else if(!keyH.viewPressed) {
+            gp.ui.showItem = false;
+        }
+
+        if(hasPaxil && keyH.viewPressed) {
+            gp.ui.showItem = true;
+        } else if(!keyH.viewPressed) {
+            gp.ui.showItem = false;
+        }
+
+        if(hasLexapro && keyH.viewPressed) {
+            gp.ui.showItem = true;
+        } else if(!keyH.viewPressed) {
+            gp.ui.showItem = false;
+        }
+
+        if(hasCelexa && keyH.viewPressed) {
+            gp.ui.showItem = true;
+        } else if(!keyH.viewPressed) {
+            gp.ui.showItem = false;
+        }
+
+        if(hasDoll && keyH.viewPressed) {
             gp.ui.showItem = true;
         } else if(!keyH.viewPressed) {
             gp.ui.showItem = false;

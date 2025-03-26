@@ -71,6 +71,7 @@ public class NPC_VitiligoPatient extends Entity{
             
             gp.player.hasBuds = 0;
             hasObj = true;
+            gp.player.hasCelexa = true;
         }
 
         if(!hasMissionObj) {

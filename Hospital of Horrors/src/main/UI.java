@@ -442,7 +442,32 @@ public class UI {
 
             if(showItem) {
 
-                g2.drawImage(noteImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                if(gp.player.hasPapyrus == 1) {
+                    g2.drawImage(noteImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                }
+                if(gp.player.hasPill) {
+                    g2.drawImage(pillImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                }
+                if(gp.player.hasCelexa) {
+                    g2.drawImage(celexaImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                }
+                if(gp.player.hasZoloft) {
+                    g2.drawImage(zoloftImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                }
+                if(gp.player.hasPaxil) {
+                    g2.drawImage(paxilImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                }
+                if(gp.player.hasLexapro) {
+                    g2.drawImage(lexaproImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                }
+                if(gp.player.hasDoll) {
+                    g2.drawImage(dollImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                }
+
+                //WHAT HAPPENS WHEN YOU HAVE BOTH??!
+                //can USE COMMANDNUM LIKE STRUCTURE TO SELECT THE OBJ I WANT TO VIEW use E
+
+                //FOR MONSTERS MAKE 2 ACTIONS MINDLESS AND FOLLOW PLAYER GIVE DIF DOORS AND TRUE IF DOOR OPEN
             }
 
             if(messageOn == true) {

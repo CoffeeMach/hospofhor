@@ -72,6 +72,7 @@ public class NPC_BlackPatient extends Entity{
             
             gp.player.hasPapyrus = 0;
             hasObj = true;
+            gp.player.hasZoloft = true;
         }
 
         if(!hasMissionObj) {

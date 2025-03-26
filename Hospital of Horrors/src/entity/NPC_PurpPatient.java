@@ -71,6 +71,7 @@ public class NPC_PurpPatient extends Entity{
             
             gp.player.hasEye = 0;
             hasObj = true;
+            gp.player.hasPaxil = true;
         }
 
         if(!hasMissionObj) {

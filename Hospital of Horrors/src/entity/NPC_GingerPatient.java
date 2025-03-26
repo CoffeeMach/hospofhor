@@ -71,6 +71,7 @@ public class NPC_GingerPatient extends Entity{
 
             gp.player.hasHeart = 0;
             hasObj = true;
+            gp.player.hasLexapro = true;
         }
 
         if(!hasMissionObj) {

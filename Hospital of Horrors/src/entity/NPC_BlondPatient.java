@@ -73,6 +73,7 @@ public class NPC_BlondPatient extends Entity{
             
             gp.player.hasFood = 0;
             hasObj = true;
+            gp.player.hasPill = true;
         }
 
         if(!hasMissionObj) {

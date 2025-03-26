@@ -51,10 +51,10 @@ public class NPC_VitiligoPatient extends Entity{
                       "You haven't gone mad yet, right? Fever? Tremors?..\n" +  
                       "voices? The voices are killing me...";  
 
-        dialogue[1] = "Finally... silence. This disinfectant will protect\n" +
-                      "you from sickness on the road. Use it wisely...";
+        dialogue[1] = "Finally... silence. This pill will protect you\n" +
+                      "from the unknown on the road. Use it wisely...";
 
-        dialogue[2] = "Keep walking child.";
+        dialogue[2] = "Keep walking child. Find the Pill Book.";
 
     }
 
@@ -70,9 +70,7 @@ public class NPC_VitiligoPatient extends Entity{
         if(hasBuds && !updatedKidney) {
             
             gp.player.hasBuds = 0;
-            gp.player.hasKidney += 1;
-            gp.player.hasWater += 1;
-            updatedKidney = true;
+            hasObj = true;
         }
 
         if(!hasMissionObj) {

@@ -6,10 +6,12 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+import entity.NPC_BlackPatient;
 import entity.NPC_BlondPatient;
 import entity.NPC_BluePatient;
 import entity.NPC_GingerPatient;
 import entity.NPC_PurpPatient;
+import entity.NPC_VitiligoPatient;
 import object.OBJ_AcidSpilled;
 import object.OBJ_Box;
 import object.OBJ_Buds;
@@ -34,6 +36,10 @@ import object.OBJ_MiniKey;
 import object.OBJ_MonsterEnd;
 import object.OBJ_Note;
 import object.OBJ_Pill;
+import object.OBJ_PillCelexa;
+import object.OBJ_PillLexapro;
+import object.OBJ_PillPaxil;
+import object.OBJ_PillZoloft;
 import object.OBJ_Sick;
 import object.OBJ_Title;
 import object.OBJ_WaterSymbol;
@@ -90,6 +96,7 @@ public class UI {
     BufferedImage boxImage;
     BufferedImage titleImage;
     BufferedImage monsterImage;
+    BufferedImage celexaImage, lexaproImage, paxilImage, zoloftImage;
 
     public boolean messageOn = false;
     public String message = "";
@@ -209,6 +216,18 @@ public class UI {
 
         OBJ_MonsterEnd monster = new OBJ_MonsterEnd(gp);
         monsterImage = monster.image;
+
+        OBJ_PillCelexa celexa = new OBJ_PillCelexa(gp);
+        celexaImage = celexa.image;
+
+        OBJ_PillLexapro lexapro = new OBJ_PillLexapro(gp);
+        lexaproImage = lexapro.image;
+
+        OBJ_PillPaxil paxil = new OBJ_PillPaxil(gp);
+        paxilImage = paxil.image;
+
+        OBJ_PillZoloft zoloft = new OBJ_PillZoloft(gp);
+        zoloftImage = zoloft.image;
     }
 
     public void showMessage(String text) {
@@ -232,7 +251,7 @@ public class UI {
             // Boxes
             g2.drawImage(boxImage, gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
 
-            for(int i = 4; i <= 10; i += 2) {
+            for(int i = 4; i <= 14; i += 2) {
                 g2.drawImage(boxImage, i*gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
             }
         }
@@ -245,7 +264,7 @@ public class UI {
             // Boxes
             g2.drawImage(boxImage, gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
 
-            for(int i = 4; i <= 10; i += 2) {
+            for(int i = 4; i <= 14; i += 2) {
                 g2.drawImage(boxImage, i*gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
             }
         }
@@ -369,7 +388,7 @@ public class UI {
 
             if(NPC_GingerPatient.hasObj) {
 
-                g2.drawImage(dynamiteImage, 4*gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
+                g2.drawImage(lexaproImage, 4*gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
 
                 text = "dinamit kazanıldı";
 
@@ -387,7 +406,7 @@ public class UI {
 
             if(NPC_PurpPatient.hasObj) {
 
-                g2.drawImage(injectionImage, 8*gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
+                g2.drawImage(paxilImage, 8*gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
 
                 text = "aşı kazanıldı";
 
@@ -399,6 +418,24 @@ public class UI {
                 g2.drawImage(dollImage, 10*gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
 
                 text = "oyuncak bebek kazanıldı";
+
+                //sendFeedback(text);
+            }
+
+            if(NPC_BlackPatient.hasObj) {
+
+                g2.drawImage(zoloftImage, 12*gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
+
+                text = "dinamit kazanıldı";
+
+                //sendFeedback(text);
+            }
+
+            if(NPC_VitiligoPatient.hasObj) {
+
+                g2.drawImage(celexaImage, 14*gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
+
+                text = "dinamit kazanıldı";
 
                 //sendFeedback(text);
             }

@@ -51,10 +51,11 @@ public class NPC_BlackPatient extends Entity{
                       "You look different. You can't remember the promise,\n" +  
                       "huh..? It's all their fault... Remember! You must...";
 
-        dialogue[1] = "It took you a while! Take this disinfectant and move,\n" +
-                      "I don't want to watch you go crazy again...";
+        dialogue[1] = "It took you a while! Take this pill and move, I don't\n" +
+                      "want to watch you go crazy once again...";
 
-        dialogue[2] = "It's watching you... without blinking.";
+        dialogue[2] = "It's watching you... without blinking. Find the Pill\n" +
+                      "Book for answers.";
 
     }
 
@@ -70,9 +71,7 @@ public class NPC_BlackPatient extends Entity{
         if(hasMemo && !updatedKidney) {
             
             gp.player.hasPapyrus = 0;
-            gp.player.hasKidney += 1;
-            gp.player.hasWater += 1;
-            updatedKidney = true;
+            hasObj = true;
         }
 
         if(!hasMissionObj) {

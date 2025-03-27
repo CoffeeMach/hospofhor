@@ -30,6 +30,8 @@ import object.OBJ_KidneySymbol5;
 import object.OBJ_KidneySymbol6;
 import object.OBJ_KidneySymbol7;
 import object.OBJ_KidneySymbol8;
+import object.OBJ_LargePill;
+import object.OBJ_LargePillZoloft;
 import object.OBJ_Memo;
 import object.OBJ_MiniAcid;
 import object.OBJ_MiniKey;
@@ -97,6 +99,7 @@ public class UI {
     BufferedImage titleImage;
     BufferedImage monsterImage;
     BufferedImage celexaImage, lexaproImage, paxilImage, zoloftImage;
+    BufferedImage largepillImage, largezoloftImage;
 
     public boolean messageOn = false;
     public String message = "";
@@ -228,6 +231,12 @@ public class UI {
 
         OBJ_PillZoloft zoloft = new OBJ_PillZoloft(gp);
         zoloftImage = zoloft.image;
+
+        OBJ_LargePillZoloft largezoloft = new OBJ_LargePillZoloft(gp);
+        largezoloftImage = largezoloft.image;
+
+        OBJ_LargePill largepill = new OBJ_LargePill(gp);
+        largepillImage = largepill.image;
     }
 
     public void showMessage(String text) {
@@ -446,13 +455,13 @@ public class UI {
                     g2.drawImage(noteImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
                 }
                 if(gp.player.hasPill) {
-                    g2.drawImage(pillImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                    g2.drawImage(largepillImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
                 }
                 if(gp.player.hasCelexa) {
                     g2.drawImage(celexaImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
                 }
                 if(gp.player.hasZoloft) {
-                    g2.drawImage(zoloftImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
+                    g2.drawImage(largezoloftImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
                 }
                 if(gp.player.hasPaxil) {
                     g2.drawImage(paxilImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
